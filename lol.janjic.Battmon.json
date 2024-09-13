@@ -1,7 +1,7 @@
 {
     "app-id": "lol.janjic.battmon",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "44",
+    "runtime-version": "46",
     "sdk": "org.gnome.Sdk",
     "command": "python3",
     "modules": [
@@ -9,14 +9,14 @@
             "name": "battmon",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --prefix=/app python-deps/",
                 "pip3 install --prefix=/app -r requirements.txt"
             ],
             "sources": [
                 {
-                    "type": "file",
-                    "path": "battmon.py"
-                }
+                    "type": "git",
+                    "url": "https://github.com/vogonwann/battmon.git",
+                    "branch": "main"
+                  }
             ]
         }
     ]
